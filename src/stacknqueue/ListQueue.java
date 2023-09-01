@@ -23,26 +23,30 @@ public class ListQueue<E> {
     return front.getItem();
   }
 
-//  public E add(E item) { //addLast
-//    Node<E> newNode = new Node<>(item);
-//    if (size == 0) {
-//      front = newNode;
-//    }
-////    Node temp = rear;
-////    temp.setNext(newNode);
-//    rear = newNode;
-//    size++;
-//    return newNode.getItem();
-//  }
+  public E add(E item) { //addLast
+    Node<E> newNode = new Node<>(item);
+    if (size == 0) {
+      front = newNode;
+    }
+//    Node temp = rear;
+//    temp.setNext(newNode);
+    rear = newNode;
+    size++;
+    return newNode.getItem();
+  }
+
+  public E poll(E e) { //removeFirst
+//    if (isEmpty()) throw new EmptyStackException();
+//    if () {
 //
-//  public E remove(E e) { //removeFirst
-////    if (isEmpty()) throw new EmptyStackException();
-////    if () {
-////
-////    }
-//    E topItem = front.getItem();
-//    front = front.getNext();
-//    size--;
-//    return topItem;
-//  }
+//    }
+    E delItem = front.getItem();
+    if (front.getNext() == null) { //하나 뿐일 때
+      front = rear = null;
+    } else {
+      front = front.getNext();
+    }
+    size--;
+    return delItem;
+  }
 }

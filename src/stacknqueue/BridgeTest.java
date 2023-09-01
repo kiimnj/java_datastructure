@@ -3,6 +3,7 @@ package stacknqueue;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//프로그래머스 다리를 지나는 트럭
 public class BridgeTest {
   //  public static void main(String[] args) {
 //    Queue<Integer> que = new LinkedList<Integer>();

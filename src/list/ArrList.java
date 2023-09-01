@@ -78,6 +78,15 @@ public class ArrList<E> {
     return tobeDeleted;
   }
 
+  public <E> int indexof(E e) { //<E>, index=-1; ->  if-break;로도 가능
+    for (int i = 0; i < a.length; i++) {
+      if (a[i] == e) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   private void resize(int newSize) {
 //    System.out.println("resize가 호출됨(" +  +")");
     E[] t = (E[])new Object[newSize];
